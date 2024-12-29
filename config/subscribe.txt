@@ -1,11 +1,11 @@
 # 这是订阅源列表，每行一个订阅地址
 # This is a list of subscription sources, with one subscription address per line
-https://ghp.ci/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt
+https://ghgo.xyz/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.txt
 http://175.178.251.183:6689/live.txt
-https://ghp.ci/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
-https://ghp.ci/raw.githubusercontent.com/plplpopp/Myiptv/refs/heads/Files/IPTV.m3u
-https://ghp.ci/raw.githubusercontent.com/plplpopp/collect-tv-txt/refs/heads/main/merged_output.txt
-https://ghp.ci/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt
+https://ghgo.xyz/raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
+https://ghgo.xyz/raw.githubusercontent.com/plplpopp/Myiptv/refs/heads/Files/IPTV.m3u
+https://ghgo.xyz/raw.githubusercontent.com/plplpopp/collect-tv-txt/refs/heads/main/merged_output.txt
+https://ghgo.xyz/raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt
 https://iptv.b2og.com/txt/fmml_ipv6.txt
 https://ghgo.xyz/raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u
 https://live.zbds.top/tv/iptv6.txt
