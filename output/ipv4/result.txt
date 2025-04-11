@@ -1,21 +1,21 @@
 🕘️更新时间,#genre#
-2025-04-12 02:13:57,http://www.douzhicloud.site:35455/gaoma/cctv1.m3u8
+2025-04-12 06:27:28,https://api.olelive.com/dis/live/CCTV1HD/hls.m3u8
 
 📺央视频道,#genre#
+CCTV-1,https://api.olelive.com/dis/live/CCTV1HD/hls.m3u8
 CCTV-1,http://www.douzhicloud.site:35455/gaoma/cctv1.m3u8
 CCTV-1,http://3501776.xyz:35455/gaoma/cctv1.m3u8
 CCTV-1,http://huashetou.fun:35455/gaoma/cctv1.m3u8
-CCTV-1,https://api.olelive.com/dis/live/CCTV1HD/hls.m3u8
 CCTV-2,http://www.douzhicloud.site:35455/gaoma/cctv2.m3u8
 CCTV-2,http://3501776.xyz:35455/gaoma/cctv2.m3u8
-CCTV-2,http://huashetou.fun:35455/gaoma/cctv2.m3u8
 CCTV-2,http://b.zgjok.com:35455/gaoma/cctv2.m3u8
+CCTV-2,http://huashetou.fun:35455/gaoma/cctv2.m3u8
 CCTV-3,http://b.zgjok.com:35455/gaoma/cctv3.m3u8
 CCTV-4,http://huashetou.fun:35455/gaoma/cctv4.m3u8
 CCTV-5,http://www.douzhicloud.site:35455/gaoma/cctv5.m3u8
 CCTV-5+,http://huashetou.fun:35455/gaoma/cctv5p.m3u8
-CCTV-7,http://huashetou.fun:35455/gaoma/cctv7.m3u8
 CCTV-7,http://b.zgjok.com:35455/gaoma/cctv7.m3u8
+CCTV-7,http://huashetou.fun:35455/gaoma/cctv7.m3u8
 CCTV-8,http://3501776.xyz:35455/gaoma/cctv8.m3u8
 CCTV-9,http://www.douzhicloud.site:35455/gaoma/cctv9.m3u8
 CCTV-9,http://huashetou.fun:35455/gaoma/cctv9.m3u8
@@ -24,7 +24,6 @@ CCTV-11,http://huashetou.fun:35455/gaoma/cctv11.m3u8
 CCTV-13,http://huashetou.fun:35455/gaoma/cctv13.m3u8
 CCTV-13,http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8
 CCTV-15,http://117.14.55.26:35455/gaoma/cctv15.m3u8
-CCTV-15,http://124.243.178.131:35455/gaoma/cctv15.m3u8
 CCTV-16,https://api.olelive.com/dis/live/CCTV16HD/hls.m3u8
 
 📡卫视频道,#genre#
@@ -36,14 +35,14 @@ CCTV-16,https://api.olelive.com/dis/live/CCTV16HD/hls.m3u8
 亳州农村频道,http://zbbf2.ahbztv.com/live/418.m3u8?zanhd#http://58.220.63.42/zbbf2.ahbztv.com/live/418.m3u8?wsSession=610820dacbd9b4b30fa93e2a-172672213903993&wsIPSercert=6d426cba8b106cdec9147b1e2a9ace7c&wsiphost=local&wsBindIP=1#http://220.180.110.101:8083/videos/live/39/13/o4ncrHkSp7q09/o4ncrHkSp7q09.M3U8#http://zbbf2.ahbztv.com/live/418.m3u8
 广东卫视,https://txmov2.a.kwimgs.com/upic/2023/01/26/09/BMjAyMzAxMjYwOTE3NDVfNzM5MzQzNzIyXzk0NjI1OTUwNTA3XzBfMw==_b_B81ddda927d33445d544befd008e60109.mp4
 广东卫视,http://150.158.112.123/%E5%85%AC%E4%BC%97%E5%8F%B7~%E7%8E%89%E7%8E%89%E8%BD%AF%E4%BB%B6%E5%BA%93/mg.php?id=gdws
-凤凰香港,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=e5b4ef626c5980be2fbdf2e7-158332927312639&amp;wsIPSercert=6f8d45434604e7d22f5b0abbc0231d01&amp;wsMonitor=0
 凤凰香港,https://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=e5b4ef626c5980be2fbdf2e7-158332927312639&amp;amp;wsIPSercert=6f8d45434604e7d22f5b0abbc0231d01&amp;amp;wsMonitor=0
+凤凰香港,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=e5b4ef626c5980be2fbdf2e7-158332927312639&amp;wsIPSercert=6f8d45434604e7d22f5b0abbc0231d01&amp;wsMonitor=0
 凤凰香港,http://zb.xmzb.xyz/123.php?id=⚽马上oppppp一凤凰香港
 凤凰卫视,http://218.202.220.2:5000/nn_live.ts?id=NEWSASIA
 凤凰卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=3c732f93c14e1bc0c07641df-156388849014752&amp;wsIPSercert=8de23d0849e78e3b16ec92a2092354
 香港卫视,http://player.cntv.cn/standard/live_HLSDRM20180606.swf?ChannelID=xianggangweishi&P2PChannelID=pd://cctv_p2p_hdxianggangweishi
-香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=3c732f93c14e1bc0c07641df-156388849014752&amp;wsIPSercert=8de23d0849e78e3b16ec92a809235421&amp;wsMonitor=0#rtmp://zhibo.hkstv.tv/livestream/mutfysrq
 香港卫视,https://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
+香港卫视,http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8?wsSession=3c732f93c14e1bc0c07641df-156388849014752&amp;wsIPSercert=8de23d0849e78e3b16ec92a809235421&amp;wsMonitor=0#rtmp://zhibo.hkstv.tv/livestream/mutfysrq
 香港卫视,rtmp://zhibo.hkstv.tv/livestream/mutfysrq
 浙江卫视,https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8?
 浙江卫视,http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#mitv://generationnexxxt.com:19806/7bf4b3a65eaf421ab6d71bd8dcc4547a
@@ -90,17 +89,17 @@ CCTV-16,https://api.olelive.com/dis/live/CCTV16HD/hls.m3u8
 法治天地,rtsp://115.153.240.228:554/PLTV/88888888/224/3221225607/iptv7994.smil
 法治天地,rtsp://115.153.212.72/PLTV/88888888/224/3221225607/iptv7994.smil
 法治天地,rtsp://115.153.247.80/PLTV/88888888/224/3221225607/iptv7994.smil
-哈哈炫动,http://139.196.151.191/rtp/239.45.1.55:5140
 哈哈炫动,http://139.129.231.228:50060/rtp/239.21.1.51:5002
+哈哈炫动,http://139.196.151.191/rtp/239.45.1.55:5140
 金鹰纪实,http://139.129.231.228:50060/rtp/239.21.1.170:5002
 金鹰纪实,rtsp://115.153.254.81/PLTV/88888888/224/3221226823/59781863.smil
 金鹰纪实,rtsp://115.153.240.228:554/PLTV/88888888/224/3221226823/59781863.smil
+快乐垂钓,http://120.55.49.231:3095/rtp/233.50.201.109:5140
 快乐垂钓,rtsp://115.153.245.70/PLTV/88888888/224/3221226834/59781974.smil
 快乐垂钓,rtsp://115.153.254.81/PLTV/88888888/224/3221226834/59781974.smil
 快乐垂钓,rtsp://115.153.240.228:554/PLTV/88888888/224/3221226834/59781974.smil
 快乐垂钓,rtsp://115.153.212.72/PLTV/88888888/224/3221226834/59781974.smil
 快乐垂钓,rtsp://115.153.247.80/PLTV/88888888/224/3221226834/59781974.smil
-快乐垂钓,rtsp://115.153.230.145/PLTV/88888888/224/3221226834/59781974.smil
 
 🪁儿童频道,#genre#
 黑莓动画,http://api3.52tb.xyz/info?id=173&token=20221127jxwhhemby
@@ -109,14 +108,15 @@ CCTV-16,https://api.olelive.com/dis/live/CCTV16HD/hls.m3u8
 优漫卡通,http://139.129.231.228:50060/rtp/239.21.1.50:5002
 优漫卡通,http://3501776.xyz:35455/itv/1000000002000010063.m3u8?cdn=ystenlive
 卡酷少儿,https://hsplay-360.v.btime.com/live_btime/btv_sn_20170706_s10/index.m3u8?time=1744142413&sign=6c7be04adc22ae0cf787a72048f5c412
-金鹰卡通,http://139.196.151.191:2051/rtp/239.45.3.118:5140
 金鹰卡通,http://139.129.231.228:50060/rtp/239.21.1.48:5002
+金鹰卡通,http://139.196.151.191:2051/rtp/239.45.3.118:5140
 金鹰卡通,http://3501776.xyz:35455/itv/5000000006000040024.m3u8?cdn=bestzb
-哈哈炫动,http://139.196.151.191/rtp/239.45.1.55:5140
 哈哈炫动,http://139.129.231.228:50060/rtp/239.21.1.51:5002
+哈哈炫动,http://139.196.151.191/rtp/239.45.1.55:5140
 动漫秀场,http://61.133.118.228:5001/douyu/9548279
 动漫秀场,http://124.248.69.76:26781/douyu/9548279
 动漫秀场,http://139.196.151.191:2051/rtp/239.45.3.134:5140
+动漫秀场,http://120.55.49.231:3095/rtp/233.50.201.184:5140
 山东少儿,http://139.129.231.228:50060/rtp/239.21.1.208:5002
 甘肃少儿,rtsp://180.95.143.19/PLTV/88888910/224/3221225494/10000100000000060000000000102582_0.smil
 甘肃少儿,rtsp://116.176.26.18/PLTV/88888910/224/3221225494/10000100000000060000000000102582_0.smil
@@ -131,6 +131,5 @@ CHC动作电影,https://gdcucc.v1.mk/gdcucc/chcdzdy.m3u8
 CHC家庭影院,http://150.158.112.123/公众号~玉玉软件库/mg.php?id=chcjtdy
 CHC家庭影院,https://gdcucc.v1.mk/gdcucc/chcjtyy.m3u8
 东方影视,http://150.158.112.123/公众号~玉玉软件库/mg.php?id=dfys
-NewTV动作电影,http://43.138.0.72:35455/yy/1382736823
 NewTV动作电影,http://3501776.xyz:35455/itv/1000000004000018653.m3u8?cdn=ystenlive
 NewTV惊悚悬疑,http://3501776.xyz:35455/itv/1000000004000024282.m3u8?cdn=ystenlive
