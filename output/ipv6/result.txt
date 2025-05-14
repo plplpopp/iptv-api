@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2025-05-14 06:17:54,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
+2025-05-14 18:19:13,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
 
 📺央视频道,#genre#
 CCTV-1,http://php.jdshipin.com/TVOD/iptv.php?id=rthk33
@@ -250,6 +250,7 @@ CHC影迷电影,http://eastscreen.tv/ooooo.php
 凤凰中文,https://stream1.freetv.fun/feng-huang-zhong-wen-15.ctv
 凤凰中文,https://stream1.freetv.fun/4e695e885cc20b20b7e3ec874fe52ed75e27443778c8ff29e498c4c9d7cec4a0.m3u8
 凤凰中文,https://stream1.freetv.fun/feng-huang-zhong-wen-12.m3u8
+凤凰中文,https://stream1.freetv.fun/fe3d3346f748e4ec230691be958aff27e91c225b43b5855685cd1fbe79c56f60.m3u8
 凤凰资讯,http://php.jdshipin.com/TVOD/iptv.php
 凤凰资讯,http://cdn3.132.us.kg/live/fhzx/stream.m3u8
 凤凰资讯,https://cdn6.163189.xyz/live/fhzx/stream.m3u8
