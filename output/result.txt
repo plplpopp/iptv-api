@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2025-05-16 18:18:57,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8
+2025-05-17 06:17:17,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8
 
 📺央视频道,#genre#
 CCTV-1,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8
@@ -42,9 +42,9 @@ CCTV-4,https://smart.pendy.dpdns.org/Smart.php?id=cctv4
 CCTV-4,http://goo.bkpcp.top/mg/cctv4o
 CCTV-4,http://goo.bkpcp.top/mg/cctv4m
 CCTV-4,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226007/index.m3u8
+CCTV-5,http://omnix.cn:4000/udp/225.1.8.89:8000
 CCTV-5,https://ldcctvwbcdtxy.liveplay.myqcloud.com/ldcctvwbcd/cdrmldcctv5plus_1/index.m3u8?b=200-2100
 CCTV-5,http://qjrhc.jydjd.top:2911/udp/224.1.100.82:11111
-CCTV-5,http://omnix.cn:4000/udp/225.1.8.89:8000
 CCTV-5,http://php.jdshipin.com/TVOD/hljyd.php?id=3221226019
 CCTV-5,http://iptv.huuc.edu.cn/hls/cctv5hd.m3u8
 CCTV-5,https://www.freetv.top/migu/641886683.m3u8?migutoken=3e5c01f93922de8d1c940fe15bb47349b27e8f7a2e624dde1a83dff3b2a80f58b7624151a3a4d00488edee34f202818557340903382fae02bb754084eb942bd50e59061df36fab62fb5b908903
@@ -316,7 +316,6 @@ CHC影迷电影,http://eastscreen.tv/ooooo.php
 湖北卫视,https://smart.pendy.dpdns.org/Smart.php?id=hubei
 湖北卫视,http://dsj.motem.top:8880/bptv/10000100000000050000000003873465.m3u8
 湖北卫视,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226501/index.m3u8
-黑龙江卫视,http://1b6467f415.iok.la:9931/tsfile/live/1070_1.m3u8
 黑龙江卫视,http://php.jdshipin.com/TVOD/hnyd.php?id=200000001898/460000089800010056
 黑龙江卫视,http://j.x.bkpcp.top/jx/HEILJHD
 黑龙江卫视,http://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8
@@ -326,6 +325,7 @@ CHC影迷电影,http://eastscreen.tv/ooooo.php
 黑龙江卫视,http://[2409:8087:1a0a:df::404b]/ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226327/index.m3u8
 黑龙江卫视,http://[2409:8087:1a01:df::4001]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226327/1.m3u8
 黑龙江卫视,http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/8/3221226327/index.m3u8
+黑龙江卫视,http://[2409:8087:8:21::18]:6610/otttv.bj.chinamobile.com/PLTV/88888888/224/3221226239/1.m3u8
 重庆卫视,http://php.jdshipin.com/TVOD/hnyd.php?id=200000001898/460000089800010053
 重庆卫视,http://z.b.bkpcp.top/m.php?id=cqws
 重庆卫视,http://j.x.bkpcp.top/jx/CHONGQHD
@@ -407,8 +407,8 @@ CHC影迷电影,http://eastscreen.tv/ooooo.php
 河北卫视,https://live.lalifeier.eu.org/hebtv/hbws.m3u8?t=1746379256&key=a57b84a2794040fb1e29774491cff353
 河北卫视,https://live.lalifeier.eu.org/hebtv/hbws.m3u8?t=1746393735&key=a66c9a98bfcaec74a3a1521fe1ceae40
 河南卫视,http://1.94.31.214/php/hntv.php?id=hnws
-河南卫视,http://nctv.top/IDOEPpiryt/hntv.php?id=hnws
 河南卫视,http://satellitepull.cnr.cn/live/wxhnws/playlist.m3u8
+河南卫视,http://nctv.top/IDOEPpiryt/hntv.php?id=hnws
 河南卫视,http://119.32.12.17:2901/udp/224.1.100.74:11111
 河南卫视,http://tvpull.dxhmt.cn:9081/tv/11425-1.m3u8
 河南卫视,http://php.jdshipin.com/TVOD/hljyd.php?id=3221226480
@@ -589,7 +589,6 @@ CHC影迷电影,http://eastscreen.tv/ooooo.php
 欢笑剧场,http://z.b.bkpcp.top/m.php?id=hxjc
 欢笑剧场,http://gat.bkpcp.top/ymg.php?id=hxjc
 欢笑剧场,http://goo.bkpcp.top/mg/hxjc
-都市剧场,http://222.179.42.129:8181/hls1.m3u8
 超级综艺,http://[2409:8087:1a01:df::7005]:80/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225714/index.m3u8
 法治天地,http://php.jdshipin.com/itv6.php?cid=bestzb&id=9001547084732463424
 法治天地,http://z.b.bkpcp.top/m.php?id=fztd
