@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2025-05-18 18:16:33,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8
+2025-05-19 06:16:55,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8
 
 📺央视频道,#genre#
 CCTV-1,https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/stream05/streamPlaylist.m3u8
@@ -11,11 +11,10 @@ CCTV-5,https://ldcctvwbcdtxy.liveplay.myqcloud.com/ldcctvwbcd/cdrmldcctv5plus_1/
 CCTV-5,http://omnix.cn:4000/udp/225.1.8.89:8000
 CCTV-6,http://qjrhc.jydjd.top:2911/udp/224.1.100.84:11111
 CCTV-6,http://119.32.12.17:2901/udp/224.1.100.84:11111
-CCTV-7,http://omnix.cn:4000/udp/225.1.8.7:8104
 CCTV-7,http://119.32.12.17:2901/udp/224.1.100.27:11111
+CCTV-7,http://omnix.cn:4000/udp/225.1.8.7:8104
 CCTV-9,http://119.32.12.17:2901/udp/224.1.100.29:11111
 CCTV-12,http://119.32.12.17:2901/udp/224.1.100.78:11111
-CCTV-12,http://58.19.38.162:9901/tsfile/live/0012_1.m3u8
 CCTV-14,http://119.32.12.17:2901/udp/224.1.100.80:11111
 CCTV-16,http://home.yulei.online:9999/rtp/226.0.2.169:9264
 
@@ -28,7 +27,6 @@ CHC动作电影,https://gdcucc.v1.mk/gdcucc/chcdzdy.m3u8
 凤凰中文,http://playtv-live.ifeng.com/live/06OLEGEGM4G_audio.m3u8
 凤凰资讯,http://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8
 凤凰香港,https://cdn.iptv8k.top/dl/jrys.php?id=18&time=20240926215313&ip=111.229.253.40
-浙江卫视,http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8
 浙江卫视,http://119.32.12.17:2901/udp/224.1.100.52:11111
 湖南卫视,http://119.32.12.17:2901/udp/224.1.100.98:11111
 北京卫视,http://satellitepull.cnr.cn/live/wxbtv/playlist.m3u8
@@ -39,24 +37,24 @@ CHC动作电影,https://gdcucc.v1.mk/gdcucc/chcdzdy.m3u8
 甘肃卫视,http://satellitepull.cnr.cn/live/wxgsws/playlist.m3u8
 贵州卫视,http://119.32.12.17:2901/udp/224.1.100.58:11111
 河南卫视,http://1.94.31.214/php/hntv.php?id=hnws
-河南卫视,http://nctv.top/IDOEPpiryt/hntv.php?id=hnws
 河南卫视,http://satellitepull.cnr.cn/live/wxhnws/playlist.m3u8
 河南卫视,http://119.32.12.17:2901/udp/224.1.100.74:11111
 吉林卫视,http://satellitepull.cnr.cn/live/wxjlws/playlist.m3u8
 辽宁卫视,http://119.32.12.17:2901/udp/224.1.100.92:11111
 山东卫视,http://satellitepull.cnr.cn/live/wxsdws/playlist.m3u8
 山东卫视,http://119.32.12.17:2901/udp/224.1.100.50:11111
+陕西卫视,http://183.131.246.250:9901/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0
 四川卫视,http://119.32.12.17:2901/udp/224.1.100.72:11111
 深圳卫视,http://satellitepull.cnr.cn/live/wxszws/playlist.m3u8
 深圳卫视,http://119.32.12.17:2901/udp/224.1.100.40:11111
 三沙卫视,http://www.jiaocj.xyz:4000/udp/239.49.0.167:8000
 西藏卫视,http://www.lysvc.cc/daili/xztv.php?id=0
 云南卫视,https://hwapi.yntv.net/ew265l/z1z6s5.m3u8
-都市剧场,http://222.179.42.129:8181/hls1.m3u8
-都市剧场,http://112.46.105.20:8009/hls/72/index.m3u8
-都市剧场,http://183.237.95.108:9901/tsfile/live/1069_1.m3u8?key=txiptv&playlive=0&authid=0
+都市剧场,http://120.76.248.139/live/bfgd/4200000168.m3u8
 都市剧场,http://183.64.174.171:40123/ch1.m3u8
 都市剧场,http://183.64.174.171:40123/ch1.m3u8?zzhongqd
+都市剧场,http://183.237.95.108:9901/tsfile/live/1069_1.m3u8?key=txiptv&playlive=0&authid=0
+都市剧场,http://112.46.105.20:8009/hls/72/index.m3u8
 都市剧场,http://dassby.qqff.top:99/live/都市剧场/index.m3u8
 都市剧场,rtsp://115.153.245.70/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
 都市剧场,rtsp://115.153.254.81/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
