@@ -1,12 +1,12 @@
 🕘️更新时间,#genre#
-2025-05-30 18:18:20,http://qjrhc.jydjd.top:2911/udp/224.1.100.90:11111
+2025-05-31 06:15:20,http://qjrhc.jydjd.top:2911/udp/224.1.100.90:11111
 
 📺央视频道,#genre#
 CCTV-1,http://qjrhc.jydjd.top:2911/udp/224.1.100.90:11111
 CCTV-4,https://global.cgtn.cicc.media.caton.cloud/master/cgtn-america.m3u8
 CCTV-4,http://qjrhc.jydjd.top:2911/udp/224.1.100.104:11111
-CCTV-5,http://omnix.cn:4000/udp/225.1.8.89:8000
 CCTV-5,https://ldcctvwbcdtxy.liveplay.myqcloud.com/ldcctvwbcd/cdrmldcctv5plus_1/index.m3u8?b=200-2100
+CCTV-5,http://omnix.cn:4000/udp/225.1.8.89:8000
 CCTV-6,http://qjrhc.jydjd.top:2911/udp/224.1.100.84:11111
 CCTV-7,http://omnix.cn:4000/udp/225.1.8.7:8104
 CCTV-9,http://119.32.12.17:2901/udp/224.1.100.29:11111
@@ -29,8 +29,8 @@ CHC动作电影,https://gdcucc.v1.mk/gdcucc/chcdzdy.m3u8
 东南卫视,http://satellitepull.cnr.cn/live/wx32fjws/playlist.m3u8
 甘肃卫视,http://satellitepull.cnr.cn/live/wxgsws/playlist.m3u8
 贵州卫视,http://119.32.12.17:2901/udp/224.1.100.58:11111
-河南卫视,http://satellitepull.cnr.cn/live/wxhnws/playlist.m3u8
 河南卫视,http://1.94.31.214/php/hntv.php?id=hnws
+河南卫视,http://satellitepull.cnr.cn/live/wxhnws/playlist.m3u8
 吉林卫视,http://satellitepull.cnr.cn/live/wxjlws/playlist.m3u8
 吉林卫视,https://lsfb.avap.jilintv.cn/zqvk7vpj/channel/0533b55e42354f4f802bdec78e26b571/1.m3u8
 山东卫视,http://satellitepull.cnr.cn/live/wxsdws/playlist.m3u8
@@ -38,13 +38,13 @@ CHC动作电影,https://gdcucc.v1.mk/gdcucc/chcdzdy.m3u8
 深圳卫视,http://satellitepull.cnr.cn/live/wxszws/playlist.m3u8
 西藏卫视,http://www.lysvc.cc/daili/xztv.php?id=0
 云南卫视,https://hwapi.yntv.net/ew265l/z1z6s5.m3u8
-都市剧场,http://120.76.248.139/live/bfgd/4200000168.m3u8
 都市剧场,http://222.179.42.129:8181/hls1.m3u8
-都市剧场,http://112.46.105.20:8009/hls/72/index.m3u8
 都市剧场,http://183.237.95.108:9901/tsfile/live/1069_1.m3u8?key=txiptv&playlive=0&authid=0
+都市剧场,http://112.46.105.20:8009/hls/72/index.m3u8
 都市剧场,http://dassby.qqff.top:99/live/都市剧场/index.m3u8
 都市剧场,rtsp://115.153.245.70/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
 都市剧场,rtsp://115.153.254.81/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
 都市剧场,rtsp://115.153.240.228:554/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
 都市剧场,rtsp://115.153.212.72/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
 都市剧场,rtsp://115.153.222.112:554/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
+都市剧场,rtsp://115.153.247.80/PLTV/88888888/224/3221225738/10000100000000060000000000901499_0.smil
