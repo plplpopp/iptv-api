@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2025-06-06 18:22:59,http://qjrhc.jydjd.top:2911/udp/224.1.100.94:11111
+2025-06-07 06:24:42,http://qjrhc.jydjd.top:2911/udp/224.1.100.94:11111
 
 📺央视频道,#genre#
 CCTV-2,http://qjrhc.jydjd.top:2911/udp/224.1.100.94:11111
@@ -14,8 +14,8 @@ CCTV-9,http://119.32.12.17:2901/udp/224.1.100.29:11111
 广东卫视,http://satellitepull.cnr.cn/live/wxgdws/playlist.m3u8
 湖南卫视,http://119.32.12.17:2901/udp/224.1.100.98:11111
 北京卫视,http://satellitepull.cnr.cn/live/wxbtv/playlist.m3u8
-湖北卫视,http://119.32.12.17:2901/udp/224.1.100.68:11111
 湖北卫视,http://www.745612.xyz:7788/rtp/235.254.198.72:1564
+湖北卫视,http://119.32.12.17:2901/udp/224.1.100.68:11111
 东南卫视,http://satellitepull.cnr.cn/live/wx32fjws/playlist.m3u8
 甘肃卫视,http://satellitepull.cnr.cn/live/wxgsws/playlist.m3u8
 河南卫视,http://1.94.31.214/php/hntv.php?id=hnws
