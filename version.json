@@ -1,4 +1,625 @@
 {
-  "version": "2.0.0-beta5",
-  "name": "IPTV-API"
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TVBox 配置查看</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    background:
+      radial-gradient(circle at top, rgba(49, 130, 206, .18), transparent 32%),
+      linear-gradient(180deg, #0b1020 0%, #111827 100%);
+    color: #e5edf7;
+    min-height: 100vh;
+    padding: 28px 16px 40px;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+    color: #8ec5ff;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero-text p {
+    color: #96a6bf;
+    font-size: .95rem;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 14px;
+    background: rgba(15, 23, 42, .72);
+    border: 1px solid rgba(148, 163, 184, .18);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: transform .12s ease, opacity .15s ease, background .15s ease;
+    white-space: nowrap;
+  }
+
+  .btn:hover { opacity: .92; }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary { background: #2563eb; }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-success { background: #059669; }
+  .btn-success:hover { background: #047857; }
+  .btn-ghost {
+    background: rgba(148, 163, 184, .12);
+    color: #dbeafe;
+    border: 1px solid rgba(148, 163, 184, .24);
+  }
+  .btn-ghost:hover { background: rgba(148, 163, 184, .2); }
+  .btn-sm { padding: 6px 12px; font-size: .82rem; }
+
+  .counter {
+    margin-left: auto;
+    color: #94a3b8;
+    font-size: .86rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, .18);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .28);
+    background: rgba(15, 23, 42, .84);
+    backdrop-filter: blur(12px);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+
+  thead th {
+    text-align: left;
+    padding: 14px 16px;
+    color: #9fb4d1;
+    font-size: .84rem;
+    font-weight: 700;
+    background: rgba(30, 41, 59, .92);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  tbody tr { border-top: 1px solid rgba(51, 65, 85, .9); }
+  tbody tr:hover { background: rgba(30, 41, 59, .72); }
+
+  td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    font-size: .9rem;
+  }
+
+  .td-index {
+    width: 60px;
+    text-align: center;
+    color: #64748b;
+  }
+
+  .td-name {
+    min-width: 220px;
+    font-weight: 600;
+  }
+
+  .url-text {
+    display: inline-block;
+    max-width: 100%;
+    color: #7dd3fc;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: .84rem;
+    line-height: 1.6;
+    word-break: break-all;
+  }
+
+  .td-status {
+    width: 150px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .td-action {
+    width: 170px;
+    white-space: nowrap;
+  }
+
+  .td-action .btn { margin-right: 6px; }
+  .status-ok { color: #4ade80; font-size: .8rem; }
+  .status-fail { color: #f87171; font-size: .8rem; }
+  .status-none { color: #64748b; font-size: .8rem; }
+  .status-checking { color: #fbbf24; font-size: .8rem; }
+  .spin { display: inline-block; animation: spin .8s linear infinite; }
+
+  .empty {
+    padding: 48px 24px;
+    text-align: center;
+    color: #94a3b8;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 720px) {
+    body { padding: 20px 12px 28px; }
+    .hero { flex-direction: column; }
+    .toolbar { padding: 12px; }
+    .counter { width: 100%; margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>TVBox 配置查看</h1>
+      <p>仅保留配置查看、连通性检测和一键复制。</p>
+    </div>
+    <!-- <a href="index.php" class="btn btn-ghost">返回管理界面</a> -->
+  </div>
+
+  <div class="toolbar">
+    <button type="button" class="btn btn-primary" onclick="checkAll()">⚡ 全部检测</button>
+    <span class="counter" id="counterLabel">共 30 条</span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="td-index">#</th>
+          <th class="td-name">名称</th>
+          <th>链接 URL</th>
+          <th class="td-status">状态</th>
+          <th class="td-action">操作</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr data-url="http://tvbox.王二小放牛娃.top">
+          <td class="td-index row-num">1</td>
+          <td class="td-name">王二小</td>
+          <td><span class="url-text">http://tvbox.王二小放牛娃.top</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://肥猫.com/">
+          <td class="td-index row-num">2</td>
+          <td class="td-name">肥猫线路</td>
+          <td><span class="url-text">http://肥猫.com/</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://我不是.摸鱼儿.com">
+          <td class="td-index row-num">3</td>
+          <td class="td-name">摸鱼接口</td>
+          <td><span class="url-text">http://我不是.摸鱼儿.com</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://cdn.qiaoji8.com/tvbox.json">
+          <td class="td-index row-num">4</td>
+          <td class="td-name">巧技接口</td>
+          <td><span class="url-text">http://cdn.qiaoji8.com/tvbox.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://d.kstore.dev/download/7213/吃猫的鱼">
+          <td class="td-index row-num">5</td>
+          <td class="td-name">吃猫的鱼接口</td>
+          <td><span class="url-text">https://d.kstore.dev/download/7213/吃猫的鱼</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://xn--xkkx-rp5imh.v.nxog.top/api.php?id=3">
+          <td class="td-index row-num">6</td>
+          <td class="td-name">欧歌单线路接口</td>
+          <td><span class="url-text">https://xn--xkkx-rp5imh.v.nxog.top/api.php?id=3</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://tv.xn--yhqu5zs87a.top">
+          <td class="td-index row-num">7</td>
+          <td class="td-name">菜妮丝XBPQ接口</td>
+          <td><span class="url-text">https://tv.xn--yhqu5zs87a.top</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://g.3344550.xyz/https://raw.githubusercontent.com/jigedos/1024/master/jsm.json">
+          <td class="td-index row-num">8</td>
+          <td class="td-name">公众号【非凡小小】</td>
+          <td><span class="url-text">https://g.3344550.xyz/https://raw.githubusercontent.com/jigedos/1024/master/jsm.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://700sjro44343.vicp.fun/eggp/0211/tv.json">
+          <td class="td-index row-num">9</td>
+          <td class="td-name">二月红接口</td>
+          <td><span class="url-text">https://700sjro44343.vicp.fun/eggp/0211/tv.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://ztha.top/TVBox/thdjk.json">
+          <td class="td-index row-num">10</td>
+          <td class="td-name">公众号【挺好分享】</td>
+          <td><span class="url-text">http://ztha.top/TVBox/thdjk.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://gitee.com/lukei7/lib/raw/Luck/%E8%87%AA%E5%BB%BA.json">
+          <td class="td-index row-num">11</td>
+          <td class="td-name">公众号【蓝天日记】</td>
+          <td><span class="url-text">https://gitee.com/lukei7/lib/raw/Luck/%E8%87%AA%E5%BB%BA.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://chuanshuo.77blog.cn/tv.json">
+          <td class="td-index row-num">12</td>
+          <td class="td-name">传说blog</td>
+          <td><span class="url-text">https://chuanshuo.77blog.cn/tv.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://gitee.com/yiwu369/6758/raw/master/%E9%9D%92%E9%BE%99/1.json">
+          <td class="td-index row-num">13</td>
+          <td class="td-name">青龙</td>
+          <td><span class="url-text">https://gitee.com/yiwu369/6758/raw/master/%E9%9D%92%E9%BE%99/1.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://box.ufuzi.com/tv/qq/短剧频道/api.json">
+          <td class="td-index row-num">14</td>
+          <td class="td-name">短剧频道</td>
+          <td><span class="url-text">http://box.ufuzi.com/tv/qq/短剧频道/api.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer">
+          <td class="td-index row-num">15</td>
+          <td class="td-name">少儿频道</td>
+          <td><span class="url-text">https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://xn--sdds-rp5imh.v.nxog.top/apitv.php?id=3">
+          <td class="td-index row-num">16</td>
+          <td class="td-name">欧歌接口</td>
+          <td><span class="url-text">https://xn--sdds-rp5imh.v.nxog.top/apitv.php?id=3</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://home.jundie.top:81/top98.json">
+          <td class="td-index row-num">17</td>
+          <td class="td-name">俊哥接口</td>
+          <td><span class="url-text">http://home.jundie.top:81/top98.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://9xi4o.tk/0725.json">
+          <td class="td-index row-num">18</td>
+          <td class="td-name">4K云盘接口</td>
+          <td><span class="url-text">https://9xi4o.tk/0725.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://pandown.pro/tvbox/tvbox.json">
+          <td class="td-index row-num">19</td>
+          <td class="td-name">巧儿接口</td>
+          <td><span class="url-text">http://pandown.pro/tvbox/tvbox.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json">
+          <td class="td-index row-num">20</td>
+          <td class="td-name">黄金分割工作室</td>
+          <td><span class="url-text">https://gitlab.com/lzc1021lzc/hjfggzs.hjys/-/raw/main/hjys.free.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://影视仓.com/">
+          <td class="td-index row-num">21</td>
+          <td class="td-name">影视仓</td>
+          <td><span class="url-text">http://影视仓.com/</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://www.饭太硬.com/tv">
+          <td class="td-index row-num">22</td>
+          <td class="td-name">饭太硬接口</td>
+          <td><span class="url-text">http://www.饭太硬.com/tv</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://fty.888484.xyz/tv">
+          <td class="td-index row-num">23</td>
+          <td class="td-name">饭太硬（备用）</td>
+          <td><span class="url-text">http://fty.888484.xyz/tv</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://xhztv.top/4k.json">
+          <td class="td-index row-num">24</td>
+          <td class="td-name">小盒子4K</td>
+          <td><span class="url-text">http://xhztv.top/4k.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://tv.nxog.top/m">
+          <td class="td-index row-num">25</td>
+          <td class="td-name">欧歌4K</td>
+          <td><span class="url-text">http://tv.nxog.top/m</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://tv.nxog.top/m/111.php?ou=公众号欧歌app&amp;mz=index&amp;jar=index&amp;123&amp;b=tv">
+          <td class="td-index row-num">26</td>
+          <td class="td-name">欧歌免费</td>
+          <td><span class="url-text">https://tv.nxog.top/m/111.php?ou=公众号欧歌app&amp;mz=index&amp;jar=index&amp;123&amp;b=tv</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://www.mpanso.com/小米/DEMO.json">
+          <td class="td-index row-num">27</td>
+          <td class="td-name">小米接口</td>
+          <td><span class="url-text">http://www.mpanso.com/小米/DEMO.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://tvbox.xn--4kq62z5rby2qupq9ub.top/">
+          <td class="td-index row-num">28</td>
+          <td class="td-name">王二小接口</td>
+          <td><span class="url-text">http://tvbox.xn--4kq62z5rby2qupq9ub.top/</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="http://tv.999888987.xyz">
+          <td class="td-index row-num">29</td>
+          <td class="td-name">公众号【王二小放牛娃】</td>
+          <td><span class="url-text">http://tv.999888987.xyz</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+        <tr data-url="https://gh.aptv.app/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json">
+          <td class="td-index row-num">30</td>
+          <td class="td-name">南风接口（代理）</td>
+          <td><span class="url-text">https://gh.aptv.app/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json</span></td>
+          <td class="td-status status-cell"><span class="status-none">—</span></td>
+          <td class="td-action">
+            <button type="button" class="btn btn-primary btn-sm" onclick="checkUrl(this)">检测</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="copyUrl(this)">复制</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+function getRowUrl(row) {
+  return row.dataset.url ? row.dataset.url.trim() : '';
+}
+
+async function checkRowUrl(row, url) {
+  const cell = row.querySelector('.status-cell');
+  if (!cell) return;
+  cell.innerHTML = '<span class="status-checking"><span class="spin">↻</span> 检测中…</span>';
+
+  const formData = new FormData();
+  formData.append('action', 'check_url');
+  formData.append('url', url);
+
+  try {
+    const response = await fetch('', { method: 'POST', body: formData });
+    const text = await response.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (error) {
+      throw new Error(text || 'Invalid JSON');
+    }
+    if (data.status === 'ok') {
+      cell.innerHTML = `<span class="status-ok">● ${data.code}&nbsp;&nbsp;${data.ms}ms</span>`;
+    } else {
+      const label = data.code ? data.code : (data.msg || '失败');
+      cell.innerHTML = `<span class="status-fail">● ${label}</span>`;
+    }
+  } catch (error) {
+    cell.innerHTML = '<span class="status-fail">● 请求错误</span>';
+  }
+}
+
+function checkUrl(btn) {
+  const row = btn.closest('tr');
+  const url = getRowUrl(row);
+  if (!url) {
+    alert('URL 为空');
+    return;
+  }
+  checkRowUrl(row, url);
+}
+
+function copyUrl(btn) {
+  const row = btn.closest('tr');
+  const url = getRowUrl(row);
+  if (!url) {
+    alert('URL 为空');
+    return;
+  }
+
+  const onSuccess = () => {
+    const originalText = btn.textContent;
+    btn.textContent = '已复制';
+    setTimeout(() => {
+      btn.textContent = originalText;
+    }, 1500);
+  };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(url).then(onSuccess);
+    return;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = url;
+  textarea.style.cssText = 'position:fixed;opacity:0;pointer-events:none;';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  onSuccess();
+}
+
+async function checkAll() {
+  const rows = Array.from(document.querySelectorAll('#tbody tr[data-url]'));
+  if (!rows.length) {
+    alert('没有可检测的 URL');
+    return;
+  }
+
+  const concurrency = 5;
+  let currentIndex = 0;
+
+  async function runNext() {
+    if (currentIndex >= rows.length) {
+      return;
+    }
+
+    const row = rows[currentIndex++];
+    const url = getRowUrl(row);
+    if (url) {
+      await checkRowUrl(row, url);
+    }
+    await runNext();
+  }
+
+  await Promise.all(Array(Math.min(concurrency, rows.length)).fill(null).map(runNext));
+}
+</script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6138342451093224"
+     crossorigin="anonymous"></script>
+</body>
+</html>
 }
